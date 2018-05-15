@@ -8,7 +8,6 @@ class App extends Component {
     id: '',
     name: ''
   }
-
   componentDidmMount() {
     this.props.getCurriculums();
   }
@@ -31,8 +30,6 @@ class App extends Component {
       name: ''
     });
   }
-
-
   render() {
     const { curriculums } = this.props;
     
@@ -44,7 +41,7 @@ class App extends Component {
             curriculums.map((curriculum, index) => {
               return (
                 <tr ><br />
-                <li>  { curriculum.name + ' '}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li>  { curriculum.name + ' '}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </li>
                  <td><br /><button id={curriculum.id} onClick={this.handleDelete}>delete
                  </button> </td>
@@ -63,9 +60,7 @@ class App extends Component {
     );
   }
 }
-
 const mapStatetoProps = ({ curriculums }) => {
   return { curriculums }
 }
-
 export default connect(mapStatetoProps, { getCurriculums, createCurriculums, deleteCurriculums })(App);
