@@ -39,5 +39,3 @@ curriculums = tmp;
 res.send(curriculums);
 console.log('Delete Curriculums : ' ,id );
 });
-
-console.log('Server is running ... on localhost:8088');
